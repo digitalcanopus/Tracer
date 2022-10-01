@@ -12,24 +12,29 @@ namespace Library1
         public string ClassName { get; set; }
         public string MethodName { get; set; }
         public long Time { get; set; }
-        private Stopwatch Clock1 { get; set; }
+        private Stopwatch Clock { get; set; }
 
         public Tracer(string className, string methodName)
         {
             ClassName = className;
             MethodName = methodName;
-            Clock1 = new Stopwatch();
+            Clock = new Stopwatch();
+        }
+
+        public Tracer()
+        {
+            Clock = new Stopwatch();
         }
 
         public void StartTrace()
         {
-            Clock1.Start();
+            Clock.Start();
         }
 
         public void StopTrace()
         {
-            Clock1.Stop();
-            Time = Clock1.ElapsedTicks;
+            Clock.Stop();
+            Time = Clock.ElapsedTicks;
         }
 
         public TraceResult GetTraceResult()

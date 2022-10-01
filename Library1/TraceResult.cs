@@ -15,6 +15,11 @@ namespace Library1
             Time = time;
         }
 
+        public void TracePrint()
+        {
+            Console.Write(ClassName + ".");
+            Console.Write(MethodName + ": ");
+            Console.WriteLine(Time);
+        }
     }
-
 }
