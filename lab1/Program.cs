@@ -13,8 +13,8 @@ namespace lab1
 
         public static void Thread1()
         {
-            Stopwatch clock1 = new Stopwatch();
-            clock1.Start();
+            Stopwatch clock = new Stopwatch();
+            clock.Start();
 
             Tracer tracer = new Tracer(nameof(TracedMethods), nameof(TracedMethods.FirstMethod));
             tracer.StartTrace();
@@ -22,26 +22,26 @@ namespace lab1
             tracer.StopTrace();
             TraceResult result = tracer.GetTraceResult();
 
-            clock1.Stop();
+            clock.Stop();
 
-            TInfo tinfo = new TInfo(Thread.CurrentThread.ManagedThreadId, clock1.ElapsedTicks);
+            TInfo tinfo = new TInfo(Thread.CurrentThread.ManagedThreadId, clock.ElapsedTicks);
             MInfo minfo = new MInfo(result);
-            tinfo.MetInfList.Add(minfo);
+            tinfo.MethodsInfList.Add(minfo);
             ThrInfList.Add(tinfo);
 
-            Console.WriteLine("hui1");
+            Console.WriteLine("1");
             Thread.Sleep(1000);
         }
 
         public static void Thread2()
         {
-            Console.WriteLine("hui2");
+            Console.WriteLine("2");
             Thread.Sleep(1000);
         }
 
         public static void Thread3()
         {
-            Console.WriteLine("hui3");
+            Console.WriteLine("3");
             Thread.Sleep(1000);
         }
 
