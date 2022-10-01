@@ -10,13 +10,13 @@ namespace Library1
     {
         public int Id { get; set; }
         public long Time { get; set; }
-        public List<MInfo> MetInfList { get; set; }
+        public List<MInfo> MethodsInfList { get; set; }
 
         public TInfo(int id, long time)
         {
             Id = id;
             Time = time;
-            MetInfList = new List<MInfo>();
+            MethodsInfList = new List<MInfo>();
         }
     }
 }
