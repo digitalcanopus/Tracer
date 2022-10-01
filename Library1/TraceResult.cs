@@ -8,6 +8,7 @@ namespace Library1
         public string MethodName { get; set; }
         public long Time { get; set; }
 
+       //result struct
         public TraceResult(string className, string methodName, long time)
         {
             ClassName = className;
