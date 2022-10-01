@@ -29,19 +29,19 @@ namespace lab1
             tinfo.MetInfList.Add(minfo);
             ThrInfList.Add(tinfo);
 
-            Console.WriteLine("hui1");
+            Console.WriteLine("1");
             Thread.Sleep(1000);
         }
 
         public static void Thread2()
         {
-            Console.WriteLine("hui2");
+            Console.WriteLine("2");
             Thread.Sleep(1000);
         }
 
         public static void Thread3()
         {
-            Console.WriteLine("hui3");
+            Console.WriteLine("3");
             Thread.Sleep(1000);
         }
 
