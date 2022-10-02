@@ -13,7 +13,11 @@ namespace Library1
     {
         public string JsonSer(ProcessedText text)
         {
-            return JsonSerializer.Serialize(text);
+            var opt = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+            return JsonSerializer.Serialize(text, opt);
         }
 
         public string XmlSer(ProcessedText text)
