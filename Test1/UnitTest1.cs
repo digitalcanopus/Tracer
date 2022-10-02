@@ -10,12 +10,12 @@ namespace Test1
         [TestMethod]
         public void CompareSleep1ToSleep2()
         {
-            Tracer tr1 = new Tracer(nameof(Tracer), nameof(TracedMethods.MSleep1));
+            Tracer tr1 = new Tracer(nameof(TracedMethods), nameof(TracedMethods.MSleep1));
             tr1.StartTrace();
             TracedMethods.MSleep1();
             tr1.StopTrace();
 
-            Tracer tr2 = new Tracer(nameof(Tracer), nameof(TracedMethods.MSleep2));
+            Tracer tr2 = new Tracer(nameof(TracedMethods), nameof(TracedMethods.MSleep2));
             tr2.StartTrace();
             TracedMethods.MSleep2();
             tr2.StopTrace();
@@ -29,12 +29,12 @@ namespace Test1
         [TestMethod]
         public void CompareArithm1ToArithm2()
         {
-            Tracer tr1 = new Tracer(nameof(Tracer), nameof(TracedMethods.SumArithmProgr1));
+            Tracer tr1 = new Tracer(nameof(TracedMethods), nameof(TracedMethods.SumArithmProgr1));
             tr1.StartTrace();
             TracedMethods.SumArithmProgr1();
             tr1.StopTrace();
 
-            Tracer tr2 = new Tracer(nameof(Tracer), nameof(TracedMethods.SumArithmProgr2));
+            Tracer tr2 = new Tracer(nameof(TracedMethods), nameof(TracedMethods.SumArithmProgr2));
             tr2.StartTrace();
             TracedMethods.SumArithmProgr2();
             tr2.StopTrace();
