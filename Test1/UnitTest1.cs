@@ -23,7 +23,7 @@ namespace Test1
             TraceResult res1 = tr1.GetTraceResult();
             TraceResult res2 = tr2.GetTraceResult();
 
-            Assert.IsTrue(res1.Time > res2.Time);
+            Assert.IsTrue(res1.Time < res2.Time);
         }
 
         [TestMethod]
@@ -48,13 +48,13 @@ namespace Test1
         [TestMethod]
         public void CompareSimpleToNested()
         {
-            Tracer tr1 = new Tracer(nameof(TracedMethods), nameof(TracedMethods.TraceMethod1));
+            Tracer tr1 = new Tracer(nameof(Tracer), nameof(TracedMethods.TraceMethod1));
             tr1.StartTrace();
             TracedMethods.TraceMethod1();
             tr1.StopTrace();
 
             TracedMethods trace = new TracedMethods();
-            Tracer tr2 = new Tracer(nameof(TracedMethods), nameof(TracedMethods.TraceMethodInMethod));
+            Tracer tr2 = new Tracer(nameof(Tracer), nameof(TracedMethods.TraceMethodInMethod));
             tr2.StartTrace();
             trace.TraceMethodInMethod();
             tr2.StopTrace();
@@ -62,7 +62,7 @@ namespace Test1
             TraceResult res1 = tr1.GetTraceResult();
             TraceResult res2 = tr2.GetTraceResult();
 
-            Assert.IsTrue(res1.Time > res2.Time);
+            Assert.IsTrue(res1.Time < res2.Time);
         }
 
         [TestMethod]
