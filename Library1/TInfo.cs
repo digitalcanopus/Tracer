@@ -19,7 +19,7 @@ namespace Library1
             MethodsInfList = new List<MInfo>();
         }
 
-        //add information about methods in thread
+        //add inf about method in thread
         public void MethodInfAdd(MInfo mInfo)
         {
             MethodsInfList.Add(mInfo);
