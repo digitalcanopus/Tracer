@@ -119,6 +119,15 @@ namespace lab1
             t2.Join();
             t3.Join();
 
+            Serialize ser = new Serialize();
+            ProcessedText output = new ProcessedText();
+            output.tInfo = ThrInfList;
+            string json = ser.JsonSer(output);
+            string xml = ser.XmlSer(output);
+
+            Console.WriteLine($"{json}\n\n{xml}");
+            FileWrite("json.txt", json);
+            FileWrite("xml.txt", xml);
         }
     }
 }
