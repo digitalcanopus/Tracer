@@ -9,7 +9,7 @@ using Library1;
 
 namespace lab1
 {
-    class Program
+    public class Program
     {
         public static List<TInfo> ThrInfList = new List<TInfo>();
 
