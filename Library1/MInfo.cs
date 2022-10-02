@@ -28,5 +28,11 @@ namespace Library1
             Time = result.Time;
             NestedMethods = new List<MInfo>();
         }
+
+        //for new methods
+        public MInfo()
+        {
+            NestedMethods = new List<MInfo>();
+        }
     }
 }

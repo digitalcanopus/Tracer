@@ -18,5 +18,10 @@ namespace Library1
             Time = time;
             MethodsInfList = new List<MInfo>();
         }
+
+        public void MethodInfAdd(MInfo mInfo)
+        {
+            MethodsInfList.Add(mInfo);
+        }
     }
 }
