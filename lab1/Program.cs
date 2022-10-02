@@ -125,7 +125,10 @@ namespace lab1
             string json = ser.JsonSer(output);
             string xml = ser.XmlSer(output);
 
-            Console.WriteLine($"{json}\n\n{xml}");
+            Console.WriteLine(json);
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine(xml);
+
             FileWrite("json.txt", json);
             FileWrite("xml.txt", xml);
         }
