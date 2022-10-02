@@ -8,7 +8,7 @@ using Library1;
 
 namespace lab1
 {
-    public static class TracedMethods
+    public class TracedMethods
     {
         public static void MSleep1()
         {
@@ -52,7 +52,7 @@ namespace lab1
             return new MInfo(tracer.GetTraceResult());
         }
 
-        public static MInfo TraceMethodInMethod()
+        public MInfo TraceMethodInMethod()
         {
             var firstMethod = new MInfo();
             MInfo secondMethod = TraceMethod1();
